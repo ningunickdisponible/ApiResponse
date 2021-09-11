@@ -19,7 +19,7 @@ app.get('/', function (req, res) {
     res.send('Saludos desde express');
   });
 
-  app.post('/', function(req,res){
+  app.post('/', async function(req,res){
     //console.log(req.body.url);
     try{
       obj = await fetch(req.body.url, {method: 'HEAD'});
