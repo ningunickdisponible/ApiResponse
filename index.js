@@ -26,6 +26,6 @@ app.get('/', function (req, res) {
       var actualSong = obj.url.substring(obj.url.lastIndexOf("/") + 1,100);
       res.json({"url":actualSong});
     }catch(ex){
-      res.sendStatus(500);
+      res.json({"url":""});
     }
   });
